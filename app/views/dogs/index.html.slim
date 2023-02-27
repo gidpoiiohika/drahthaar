@@ -1,0 +1,26 @@
+p style="color: green" = notice
+
+= search_form_for @q do |f|
+  = f.label :name_cont
+  = f.search_field :name_cont
+
+  = f.label :father_cont
+  = f.search_field :father_cont
+
+  = f.label :mother_cont
+  = f.search_field :mother_cont
+
+  = f.label :stigma_cont
+  = f.search_field :stigma_cont
+  
+  = f.submit
+
+h1 Dogs
+
+#dogs
+  - @dogs.each do |dog|
+    == render dog
+    p
+      = link_to "Show this dog", dog
+
+= link_to "New dog", new_dog_path
