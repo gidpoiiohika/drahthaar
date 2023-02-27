@@ -25,6 +25,7 @@ gem 'draper'
 gem 'ransack'
 gem 'rubocop-rails', require: false
 gem 'sidekiq'
+gem "slim-rails"
 
 group :development, :test do
   gem 'debug', platforms: %i[mri mingw x64_mingw]
@@ -32,6 +33,8 @@ end
 
 group :development do
   gem 'web-console'
+  gem "better_errors"
+  gem "binding_of_caller"
 end
 
 group :test do
